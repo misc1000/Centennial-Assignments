@@ -182,7 +182,7 @@ footer {
             <label for="improvement">12. How could we improve this course?</label>
             <textarea id="improvement" name="improvement" rows="4" cols="50" placeholder="Write your answer here"></textarea>
             
-            <label for="other-comments">13. Other</label>
+            <label for="other-comments">13. Other.</label>
             <textarea id="other-comments" name="other-comments" rows="4" cols="50" placeholder="Any other comments"></textarea>
         </div>
         
