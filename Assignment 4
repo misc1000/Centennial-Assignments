@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,99 +6,17 @@
     <title>CE Course Evaluation Form</title>
     <link rel="stylesheet" href="Assignment4.CSS">
 </head>
-<style>
-
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    min-height: 100vh; 
-}
-
-header {
-    background-color: #000000;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header img {
-    max-width: 150px;
-    vertical-align: middle;
-}
-
-h1 {
-    margin: 0;
-}
-
-form {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #000000;
-}
-
-
-footer {
-    text-align: center;
-    margin-top: 20px; 
-}
-</style>
 <body>
     <header>
-        <a href="https://www.centennialcollege.ca/programs-courses/full-time/business/?gad_source=1&gclid=Cj0KCQjwztOwBhD7ARIsAPDKnkC63WokA74EnXMKH6l9tgyeowrpi4AjiBg1qfgUkChrW6ncUl-OF4UaAsaCEALw_wcB">
+        <a href="https://www.centennialcollege.ca">
             <img src="Centennial_College_Logo.jpg" alt="College Logo">
         </a>
         <h1>Centennial College</h1>
-        <h2>Continuing Education Course/Instructor Evaluation</h2>
+        <h2> Continuing Education Course/Instructor Evaluation</h2>
     </header>
-
-  
     <div class="statement">
         <p>Please read each statement carefully and consider each one individually.</p>
     </div>
-    
     <form action="submit_evaluation.php" method="post">
         <div class="section">
             <h2>Course Information</h2>
@@ -108,10 +25,12 @@ footer {
             
             <label for="semester">Semester:</label>
             <select id="semester" name="semester" required>
+                <option value="" disabled selected>Select Semester</option>
                 <option value="fall">Fall</option>
                 <option value="winter">Winter</option>
                 <option value="spring/summer">Spring/Summer</option>
             </select>
+            
             <label for="year">Year:</label>
             <input type="text" id="year" name="year" required>
             
@@ -123,17 +42,55 @@ footer {
             <h2>Instructor Evaluation</h2>
             <label for="knowledge">1. Knowledge of Subject:</label>
             <select id="knowledge" name="knowledge" required>
+                <option value="" disabled selected>Select Option</option>
                 <option value="excellent">A. Excellent</option>
                 <option value="good">B. Good</option>
                 <option value="fair">C. Fair</option>
                 <option value="not_satisfactory">D. Not Satisfactory</option>
             </select>
 
-           
+            <label for="helpfulness">2. Helpfulness:</label>
+            <select id="helpfulness" name="helpfulness" required>
+                <option value="" disabled selected>Select Option</option>
+                <option value="excellent">A. Excellent</option>
+                <option value="good">B. Good</option>
+                <option value="fair">C. Fair</option>
+                <option value="not_satisfactory">D. Not Satisfactory</option>
+            </select>
+
+            <label for="courtesy">3. Courtesy and Respect for All Students:</label>
+            <select id="courtesy" name="courtesy" required>
+                <option value="" disabled selected>Select Option</option>
+                <option value="excellent">A. Excellent</option>
+                <option value="good">B. Good</option>
+                <option value="fair">C. Fair</option>
+                <option value="not_satisfactory">D. Not Satisfactory</option>
+            </select>
+
+            <label for="communication">4. Communication Skills:</label>
+            <select id="communication" name="communication" required>
+                <option value="" disabled selected>Select Option</option>
+                <option value="excellent">A. Excellent</option>
+                <option value="good">B. Good</option>
+                <option value="fair">C. Fair</option>
+                <option value="not_satisfactory">D. Not Satisfactory</option>
+            </select>
+
+            <label for="overall">5. Overall Performance:</label>
+            <select id="overall" name="overall" required>
+                <option value="" disabled selected>Select Option</option>
+                <option value="excellent">A. Excellent</option>
+                <option value="good">B. Good</option>
+                <option value="fair">C. Fair</option>
+                <option value="not_satisfactory">D. Not Satisfactory</option>
+            </select>
+        </div>
+        
         <div class="section">
             <h2>Course Evaluation</h2>
             <label for="course-material">6. How would you rate the course material?</label>
             <select id="course-material" name="course-material" required>
+                <option value="" disabled selected>Select Option</option>
                 <option value="excellent">A. Excellent</option>
                 <option value="good">B. Good</option>
                 <option value="fair">C. Fair</option>
@@ -142,6 +99,7 @@ footer {
 
             <label for="expectations">7. How much did this course meet your expectations?</label>
             <select id="expectations" name="expectations" required>
+                <option value="" disabled selected>Select Option</option>
                 <option value="excellent">A. Excellent</option>
                 <option value="good">B. Good</option>
                 <option value="fair">C. Fair</option>
@@ -150,6 +108,7 @@ footer {
 
             <label for="overall-course">8. How would you rate this course (overall)?</label>
             <select id="overall-course" name="overall-course" required>
+                <option value="" disabled selected>Select Option</option>
                 <option value="excellent">A. Excellent</option>
                 <option value="good">B. Good</option>
                 <option value="fair">C. Fair</option>
@@ -161,6 +120,7 @@ footer {
             <h2>General Information</h2>
             <label for="outline-review">9. Was the course outline reviewed/explained at the beginning of your course?</label>
             <select id="outline-review" name="outline-review" required>
+                <option value="" disabled selected>Select Option</option>
                 <option value="yes">A. Yes</option>
                 <option value="no">B. No</option>
                 <option value="not_sure">C. Not Sure</option>
@@ -168,6 +128,7 @@ footer {
 
             <label for="recommendation">10. Would you recommend this course to a friend with the same interests?</label>
             <select id="recommendation" name="recommendation" required>
+                <option value="" disabled selected>Select Option</option>
                 <option value="yes">A. Yes</option>
                 <option value="no">B. No</option>
                 <option value="not_sure">C. Not Sure</option>
@@ -182,7 +143,7 @@ footer {
             <label for="improvement">12. How could we improve this course?</label>
             <textarea id="improvement" name="improvement" rows="4" cols="50" placeholder="Write your answer here"></textarea>
             
-            <label for="other-comments">13. Other.</label>
+            <label for="other-comments">13. Other</label>
             <textarea id="other-comments" name="other-comments" rows="4" cols="50" placeholder="Any other comments"></textarea>
         </div>
         
@@ -191,9 +152,8 @@ footer {
 
     <footer>
         <p>Thank you! We pay attention to your feedback!</p>
-        <p>For more information, visit our website: <a href="https://www.centennialcollege.ca/admissions/why-choose-centennial">Centennial College</a></p>
-        <p>Contact us via email: <a href="advising@centennialcollege.ca">continuingeducation@centennialcollege.ca</a></p>
+        <p>For more information, visit our website: <a href="https://www.centennialcollege.ca">Centennial College</a></p>
+        <p>Contact us via email: <a href="https://www.centennialcollege.ca/connect">assessmentcentre@centennialcollege.ca</a></p>
     </footer>
-
 </body>
 </html>
